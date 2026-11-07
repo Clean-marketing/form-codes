@@ -8,7 +8,6 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-
   :root {
     --ink: #000000;
     --mid: #3a3a3a;
@@ -24,13 +23,11 @@
     --transition: 0.2s ease;
   }
 
-
   body {
     font-family: 'DM Sans', sans-serif;
     background: transparent;
     color: var(--ink);
   }
-
 
   .form-shell {
     background: var(--white);
@@ -42,11 +39,9 @@
     overflow: hidden;
   }
 
-
   @media (max-width: 600px) {
     .form-shell { border-radius: 0 !important; box-shadow: none !important; }
   }
-
 
   @media (min-width: 1024px) {
     .form-shell {
@@ -60,7 +55,6 @@
     }
   }
 
-
   /* Progress bar */
   .progress-bar {
     height: 4px;
@@ -73,11 +67,9 @@
     transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
   }
 
-
   .form-header {
     padding: 2.5rem 2.5rem 0;
   }
-
 
   .step-label {
     font-size: 0.88rem;
@@ -88,7 +80,6 @@
     margin-bottom: 0.6rem;
   }
 
-
   .form-header h1 {
     font-family: 'DM Serif Display', serif;
     font-size: 2.0rem;
@@ -97,7 +88,6 @@
     margin-bottom: 0.5rem;
   }
 
-
   .form-header p {
     color: var(--mid);
     font-size: 0.9rem;
@@ -105,17 +95,14 @@
     line-height: 1.5;
   }
 
-
   .form-body {
     padding: 2rem 2.5rem 2.5rem;
   }
-
 
   /* Pages */
   .page { display: none; animation: fadeIn 0.3s ease; }
   .page.active { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-
 
   /* Fields */
   .field { margin-bottom: 1.25rem; }
@@ -127,7 +114,6 @@
     margin-bottom: 0.45rem;
     letter-spacing: 0.01em;
   }
-
 
   .field input[type="text"],
   .field input[type="email"],
@@ -150,7 +136,6 @@
   }
   .field input.error { border-color: var(--danger); }
 
-
   .error-msg {
     font-size: 0.98rem;
     color: var(--danger);
@@ -158,7 +143,6 @@
     display: none;
   }
   .error-msg.visible { display: block; }
-
 
   /* Marketing consent */
   .consent-group { margin-top: 1.5rem; }
@@ -215,7 +199,6 @@
     font-weight: 400;
   }
 
-
   /* T&C checkbox */
   .tc-check {
     display: flex;
@@ -261,7 +244,6 @@
     line-height: 1.55;
     font-weight: 400;
   }
-
 
   /* Property type cards */
   .property-grid {
@@ -342,7 +324,6 @@
   }
   .property-card.selected .prop-tick { opacity: 1; transform: scale(1); }
 
-
   /* Bedroom selector */
   .bedroom-grid {
     display: grid;
@@ -365,7 +346,6 @@
   }
   .bedroom-btn:hover { border-color: var(--highlight); background: var(--highlight-light); }
   .bedroom-btn.selected { border-color: var(--highlight); background: var(--highlight-light); color: var(--highlight); font-weight: 600; }
-
 
   /* Yes/No toggle */
   .yn-field { margin-bottom: 1.25rem; }
@@ -391,7 +371,6 @@
   }
   .yn-btn:hover { border-color: var(--highlight); background: var(--highlight-light); }
   .yn-btn.selected { border-color: var(--highlight); background: var(--highlight-light); color: var(--highlight); font-weight: 600; }
-
 
   /* Buttons */
   .btn-row {
@@ -432,7 +411,6 @@
   .btn-next:hover { background: var(--btn-hover); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
   .btn-next:active { transform: translateY(0); }
 
-
   /* Confirmation / success */
   .confirm-box {
     text-align: center;
@@ -459,13 +437,11 @@
     font-weight: 300;
   }
 
-
   .divider {
     height: 1px;
     background: var(--light);
     margin: 1.5rem 0;
   }
-
 
   .section-title {
     font-size: 1.02rem;
@@ -475,11 +451,9 @@
     letter-spacing: 0.01em;
   }
 
-
   /* Quote page */
   .quote-page-header { margin-bottom: 1.5rem; }
   .quote-intro { font-size: 0.98rem; color: var(--mid); font-weight: 300; line-height: 1.5; margin-top: 0.3rem; }
-
 
   .service-card {
     border: 2px solid rgba(0,0,0,0.15);
@@ -488,6 +462,8 @@
     margin-bottom: 0.65rem;
     transition: all var(--transition);
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
   .service-card.selected-yes {
     border: 2px solid var(--highlight);
@@ -565,7 +541,6 @@
   .svc-btn:hover { border-color: var(--highlight); background: var(--highlight-light); }
   .svc-btn.active-yes { background: var(--btn); border-color: var(--btn); color: var(--btn-text); }
   .svc-btn.active-no { background: var(--light); border-color: rgba(0,0,0,0.12); color: var(--mid); }
-
 
   .quote-totals {
     background: transparent;
@@ -652,7 +627,6 @@
     flex-shrink: 0;
   }
 
-
   .loading-prices {
     text-align: center;
     padding: 2rem 0;
@@ -676,8 +650,6 @@
   }
 
 
-
-
   /* Textarea */
   .field textarea {
     width: 100%;
@@ -698,7 +670,6 @@
     border-color: var(--highlight);
     box-shadow: 0 0 0 3px var(--highlight-light);
   }
-
 
   /* Access options */
   .access-grid {
@@ -723,8 +694,6 @@
   }
   .access-btn:hover { border-color: var(--highlight); background: var(--highlight-light); }
   .access-btn.selected { border-color: var(--highlight); background: var(--highlight-light); color: var(--highlight); font-weight: 600; }
-
-
 
 
   /* ===== PACKAGE UPSELL PAGE ===== */
@@ -798,7 +767,6 @@
   .pkg-none-btn:hover { border-color: var(--mid); color: var(--ink); }
   .pkg-none-btn.selected { border-color: var(--ink); color: var(--ink); font-weight: 600; }
 
-
   /* Top back button */
   .top-back-btn {
     display: inline-flex;
@@ -819,7 +787,6 @@
   }
   .top-back-btn:hover { background: var(--highlight-light); color: var(--highlight); }
   .top-back-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
-
 
   /* ===== MOBILE ===== */
   @media (max-width: 600px) {
@@ -842,7 +809,6 @@
       padding: 1.25rem 1.25rem 2rem;
     }
 
-
     /* Property grid: 2 cols but tighter */
     .property-grid {
       grid-template-columns: 1fr 1fr;
@@ -860,7 +826,6 @@
       padding: 0.45rem 0.3rem 0.5rem;
     }
 
-
     /* Bedrooms: 3 cols → 3 cols but larger tap targets */
     .bedroom-grid {
       grid-template-columns: repeat(3, 1fr);
@@ -871,12 +836,10 @@
       font-size: 1rem;
     }
 
-
     /* Floor grid */
     .floor-grid {
       grid-template-columns: repeat(2, 1fr);
     }
-
 
     /* Access: 3 cols → 1 col stack */
     .access-grid {
@@ -887,12 +850,10 @@
       text-align: left;
     }
 
-
     /* Consent: 2 cols → 1 col */
     .consent-options {
       grid-template-columns: 1fr;
     }
-
 
     /* Freq price row: shrink text on small screens */
     .freq-amount {
@@ -908,7 +869,6 @@
       padding: 0.55rem 0.25rem;
     }
 
-
     /* Service card buttons: wrap if needed */
     .service-btns {
       flex-wrap: wrap;
@@ -918,11 +878,9 @@
       padding: 0.7rem 0.5rem;
     }
 
-
     /* Quote totals */
     .quote-total-row.main .amt { font-size: 1.3rem; }
     .quote-total-row .amt { font-size: 1.1rem; }
-
 
     /* Btn row: stack back + next vertically on very small */
     .btn-row {
@@ -940,7 +898,6 @@
       padding: 1rem 1.5rem;
       font-size: 1rem;
     }
-
 
     /* Package cards: stack price below name on very narrow */
     .pkg-card {
@@ -963,13 +920,11 @@
       margin-left: auto;
     }
 
-
     /* Upsell pricing notice rows */
     #pkgPricingRows > div {
       flex-direction: column;
       gap: 0.3rem;
     }
-
 
     /* YN buttons: bigger tap target */
     .yn-btn {
@@ -977,12 +932,10 @@
       font-size: 1.05rem;
     }
 
-
     /* Confirm box */
     .confirm-box {
       padding: 0.5rem 0;
     }
-
 
     /* Success button full width */
     .confirm-box a.btn-next {
@@ -994,10 +947,13 @@
 </style>
 <script>
   (function() {
-    var boxBg  = ('{{brandboards.logo_background_colour}}'.trim()) || '#ffffff';
-    var btnCol = ('{{brandboards.button_colour}}'.trim())          || '#000000';
-    var hlCol  = ('{{brandboards.email_background_colour}}'.trim())|| '#000000';
-
+    var boxBg  = ('{{custom_values.form_background_colour}}'.trim().replace(/[{}]/g,''))  || ('{{brandboards.logo_background_colour}}'.trim().replace(/[{}]/g,''))  || '#ffffff';
+    var btnCol = ('{{custom_values.form_button_colour}}'.trim().replace(/[{}]/g,''))       || ('{{brandboards.button_colour}}'.trim().replace(/[{}]/g,''))           || '#000000';
+    var hlCol  = ('{{custom_values.form_highlight_colour}}'.trim().replace(/[{}]/g,''))    || ('{{brandboards.email_background_colour}}'.trim().replace(/[{}]/g,'')) || '#000000';
+    // Strip any unresolved merge tags (contains { or }) — fall back to defaults
+    if (boxBg.indexOf('{') !== -1)  boxBg  = '#ffffff';
+    if (btnCol.indexOf('{') !== -1) btnCol = '#000000';
+    if (hlCol.indexOf('{') !== -1)  hlCol  = '#000000';
 
     // Parse hex to rgb components
     function hexToRgb(hex) {
@@ -1005,7 +961,6 @@
       if (hex.length === 3) hex = hex.split('').map(function(c){return c+c;}).join('');
       return [parseInt(hex.substr(0,2),16), parseInt(hex.substr(2,2),16), parseInt(hex.substr(4,2),16)];
     }
-
 
     // Relative luminance per WCAG
     function luminance(hex) {
@@ -1016,12 +971,10 @@
       return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
     }
 
-
     // Return black or white depending on which contrasts better against bg
     function contrastText(bg) {
       return luminance(bg) > 0.179 ? '#000000' : '#ffffff';
     }
-
 
     // Lighten a hex colour toward white by amount (0-1)
     function lightenHex(hex, amount) {
@@ -1030,7 +983,6 @@
       return '#' + c.map(function(x){return x.toString(16).padStart(2,'0');}).join('');
     }
 
-
     // Darken a hex colour toward black by amount (0-1)
     function darkenHex(hex, amount) {
       var c = hexToRgb(hex);
@@ -1038,15 +990,12 @@
       return '#' + c.map(function(x){return x.toString(16).padStart(2,'0');}).join('');
     }
 
-
     // Slightly contrast from a background (darken if light, lighten if dark)
     function subtleContrast(hex, amount) {
       return luminance(hex) > 0.179 ? darkenHex(hex, amount) : lightenHex(hex, amount);
     }
 
-
     var r = document.documentElement;
-
 
     // Box & text
     r.style.setProperty('--white', boxBg);
@@ -1054,23 +1003,19 @@
     r.style.setProperty('--mid',   luminance(boxBg) > 0.179 ? 'rgba(0,0,0,0.45)' : 'rgba(255,255,255,0.5)');
     r.style.setProperty('--light', luminance(boxBg) > 0.179 ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.08)');
 
-
     // Property card selected state — subtle contrast from box background
     r.style.setProperty('--card-selected-bg', subtleContrast(boxBg, 0.08));
     r.style.setProperty('--card-hover-bg',    subtleContrast(boxBg, 0.04));
-
 
     // Buttons
     r.style.setProperty('--btn',      btnCol);
     r.style.setProperty('--btn-text', contrastText(btnCol));
     r.style.setProperty('--btn-hover', luminance(btnCol) > 0.179 ? darkenHex(btnCol, 0.12) : lightenHex(btnCol, 0.2));
 
-
     // Highlights
     r.style.setProperty('--highlight',       hlCol);
     r.style.setProperty('--highlight-text',  contrastText(hlCol));
     r.style.setProperty('--highlight-light', luminance(boxBg) > 0.179 ? darkenHex(boxBg, 0.06) : lightenHex(boxBg, 0.08));
-
 
     // SVG illustration colours from HL custom values
     var svgPrimary   = ('{{custom_values.illustration_primary_colour}}'.trim())   || hlCol;
@@ -1083,7 +1028,6 @@
 </script>
 </head>
 <body>
-
 
 <div id="wh-urls"
   data-wh1="{{custom_values.webhook__quote_form__contact_details}}"
@@ -1099,7 +1043,6 @@
   <div class="progress-bar">
     <div class="progress-fill" id="progressFill" style="width: 33%"></div>
   </div>
-
 
   <!-- PAGE 1: Contact Details -->
   <div id="page1" class="page active">
@@ -1121,12 +1064,9 @@
       </div>
       <div class="field">
         <label for="phone">Phone number</label>
-        <input type="tel" id="phone" placeholder="+44 7700 900000">
+        <input type="tel" id="phone" placeholder="07700 900000">
         <div class="error-msg" id="err-phone">Please enter your phone number.</div>
       </div>
-
-
-
 
 
 
@@ -1137,13 +1077,11 @@
       </label>
       <div class="error-msg" id="err-tc">You must agree to the terms to continue.</div>
 
-
       <div class="btn-row">
         <button class="btn-next" onclick="goTo2()">Continue →</button>
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 2: Property Type -->
   <div id="page2" class="page">
@@ -1156,7 +1094,6 @@
     <div class="form-body">
                   <div class="property-grid" id="propertyGrid">
 
-
         <div class="property-card" onclick="selectProperty(this,'semi-detached')">
           <div class="prop-tick">✓</div>
           <div class="prop-illustration">
@@ -1164,7 +1101,6 @@
           </div>
           <div class="prop-name">Semi-Detached</div>
         </div>
-
 
         <div class="property-card" onclick="selectProperty(this,'terraced')">
           <div class="prop-tick">✓</div>
@@ -1174,7 +1110,6 @@
           <div class="prop-name">Terraced</div>
         </div>
 
-
         <div class="property-card" onclick="selectProperty(this,'detached')">
           <div class="prop-tick">✓</div>
           <div class="prop-illustration">
@@ -1182,7 +1117,6 @@
           </div>
           <div class="prop-name">Detached</div>
         </div>
-
 
         <div class="property-card" onclick="selectProperty(this,'three-storey')">
           <div class="prop-tick">✓</div>
@@ -1192,7 +1126,6 @@
           <div class="prop-name">Three Storey</div>
         </div>
 
-
         <div class="property-card" onclick="selectProperty(this,'flat')">
           <div class="prop-tick">✓</div>
           <div class="prop-illustration">
@@ -1201,7 +1134,6 @@
           <div class="prop-name">Flat</div>
         </div>
 
-
         <div class="property-card" onclick="selectProperty(this,'large-unusual')">
           <div class="prop-tick">✓</div>
           <div class="prop-illustration">
@@ -1209,7 +1141,6 @@
           </div>
           <div class="prop-name">Large or Unusual</div>
         </div>
-
 
         <div class="property-card" onclick="selectProperty(this,'commercial')">
           <div class="prop-tick">✓</div>
@@ -1220,11 +1151,8 @@
         </div>
 
 
-
-
       </div>
       <div class="error-msg" id="err-property" style="margin-top:0.75rem">Please select a property type.</div>
-
 
       <div class="btn-row">
         <button class="btn-back" onclick="goBack(1)">← Back</button>
@@ -1232,7 +1160,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 3: Bedrooms + extras -->
   <div id="page3" class="page">
@@ -1243,7 +1170,6 @@
       <p>Almost there — just a few more details about your home.</p>
     </div>
     <div class="form-body">
-
 
       <div class="section-title">Number of bedrooms</div>
       <div class="bedroom-grid" id="bedroomGrid">
@@ -1256,9 +1182,7 @@
       </div>
       <div class="error-msg" id="err-bedrooms" style="margin-top:0.6rem">Please select the number of bedrooms.</div>
 
-
       <div class="divider"></div>
-
 
       <div class="yn-field">
         <label>Do you have an extension?</label>
@@ -1269,7 +1193,6 @@
         <div class="error-msg" id="err-extension">Please select an option.</div>
       </div>
 
-
       <div class="yn-field">
         <label>Do you have a conservatory?</label>
         <div class="yn-group">
@@ -1278,7 +1201,6 @@
         </div>
         <div class="error-msg" id="err-conservatory">Please select an option.</div>
       </div>
-
 
       <div id="conservatoryUpsell" style="display:none">
         <div class="yn-field">
@@ -1290,7 +1212,6 @@
           <div class="error-msg" id="err-conservatoryRoofQuote">Please select an option.</div>
         </div>
 
-
         <div id="roofPanelsField" style="display:none">
           <div class="field">
             <label for="roofPanelCount">How many roof panels does it have?</label>
@@ -1300,6 +1221,17 @@
         </div>
       </div>
 
+      <div id="veluxSection" style="display:none">
+        <div class="yn-field">
+          <label>Do you have any Velux roof windows?</label>
+          <div class="yn-group">
+            <button class="yn-btn" onclick="selectYN(this,'velux','yes')">Yes</button>
+            <button class="yn-btn" onclick="selectYN(this,'velux','no')">No</button>
+          </div>
+          <div class="error-msg" id="err-velux">Please select an option.</div>
+        </div>
+
+      </div>
 
       <div class="btn-row">
         <button class="btn-back" onclick="goBack(2)">← Back</button>
@@ -1307,7 +1239,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 4a: Large / Unusual property -->
   <div id="page4a" class="page">
@@ -1340,7 +1271,6 @@
     </div>
   </div>
 
-
   <!-- PAGE 4b: Commercial / Business property -->
   <div id="page4b" class="page">
     <div class="form-header">
@@ -1371,9 +1301,7 @@
         <div class="error-msg" id="err-bizPostcode">Please enter your postcode.</div>
       </div>
 
-
       <div class="divider"></div>
-
 
       <div class="section-title" style="margin-bottom:0.75rem">Which services are you interested in?</div>
       <div id="bizServicesGrid" style="display:flex;flex-direction:column;gap:0.5rem">
@@ -1385,7 +1313,6 @@
       </div>
       <div class="error-msg" id="err-bizServices" style="margin-top:0.5rem">Please select at least one service.</div>
 
-
       <div class="btn-row">
         <button class="btn-back" onclick="goBackFromPage4()">← Back</button>
         <button class="btn-next" onclick="submitCommercial()">Submit →</button>
@@ -1393,19 +1320,29 @@
     </div>
   </div>
 
-
   <!-- PAGE 5: Booking success -->
   <div id="page5" class="page">
     <div class="form-body" style="padding-top:2.5rem">
       <div class="confirm-box">
         <div class="icon">✓</div>
         <h2 id="successHeading">Thank you for booking!</h2>
-        <p>A member of the <strong>{{location.name}}</strong> team will be in touch soon to arrange your first clean — usually by email.<br><br>You'll also receive a booking confirmation shortly.</p>
-        <a href="{{location.website}}" target="_blank" class="btn-next" style="display:inline-block;margin-top:1.5rem;text-decoration:none;text-align:center;padding:0.9rem 1.75rem;border-radius:12px;">Visit Our Website →</a>
+        <p>You'll receive a booking confirmation shortly.</p>
+
+        <!-- Regular clean: GoCardless next step -->
+        <div id="gcRegularMsg" style="display:none">
+          <p>To get your regular window cleaning underway, the next step is to set up your Direct Debit payment via GoCardless — it only takes a couple of minutes.</p>
+          <a id="gcBtn" href="#" target="_blank" class="btn-next" style="display:inline-block;margin-top:0.5rem;text-decoration:none;text-align:center;padding:0.9rem 1.75rem;border-radius:12px;">Set Up Direct Debit →</a>
+        </div>
+
+        <!-- One-off: no payment setup needed -->
+        <div id="gcOneoffMsg" style="display:none">
+          <p>A member of the <strong>{{location.name}}</strong> team will be in touch soon to arrange your clean and confirm payment details.</p>
+        </div>
+
+        <a href="{{location.website}}" target="_blank" class="btn-next" style="display:inline-block;margin-top:1.5rem;text-decoration:none;text-align:center;padding:0.9rem 1.75rem;border-radius:12px;background:transparent;border:2px solid var(--btn);color:var(--btn)">Visit Our Website →</a>
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 5b: Post-booking package upsell -->
   <div id="page5b" class="page">
@@ -1435,10 +1372,8 @@
         </div>
       </div>
 
-
       <!-- Quote totals -->
       <div class="quote-totals" id="pkgSummaryTotals" style="margin-top:1.2rem"></div>
-
 
       <div class="btn-row" style="margin-top:1.2rem">
         <button class="btn-next" onclick="submitPackageUpsell()">Add to my booking →</button>
@@ -1448,7 +1383,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 6: Custom quote success -->
   <div id="page6" class="page">
@@ -1460,7 +1394,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 6b: Flat rejection -->
   <div id="page6b" class="page">
@@ -1474,7 +1407,6 @@
     </div>
   </div>
 
-
   <!-- PAGE 6c: Front-only rejection -->
   <div id="page6c" class="page">
     <div class="form-body" style="padding-top:2.5rem">
@@ -1486,7 +1418,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 7: Flat - floor + bedrooms -->
   <div id="page7" class="page">
@@ -1505,9 +1436,7 @@
       </div>
       <div class="error-msg" id="err-flatFloor" style="margin-top:0.6rem">Please select a floor.</div>
 
-
       <div class="divider"></div>
-
 
       <div class="section-title" style="margin-bottom:0.75rem">Number of bedrooms</div>
       <div class="bedroom-grid" id="flatBedroomGrid">
@@ -1520,14 +1449,12 @@
       </div>
       <div class="error-msg" id="err-flatBedrooms" style="margin-top:0.6rem">Please select the number of bedrooms.</div>
 
-
       <div class="btn-row">
         <button class="btn-back" onclick="goBack(2)">← Back</button>
         <button class="btn-next" onclick="goToFlatQuote()">Continue →</button>
       </div>
     </div>
   </div>
-
 
   <!-- PAGE 8: Quote page -->
   <div id="page8" class="page">
@@ -1554,7 +1481,6 @@
     </div>
   </div>
 
-
   <!-- PAGE 9: Address & booking info -->
   <div id="page9" class="page">
     <div class="form-header">
@@ -1565,13 +1491,11 @@
     </div>
     <div class="form-body">
 
-
       <div class="field">
         <label for="streetAddress">Street address</label>
         <input type="text" id="streetAddress" placeholder="e.g. 12 Maple Street">
         <div class="error-msg" id="err-streetAddress">Please enter your street address.</div>
       </div>
-
 
       <div class="field">
         <label for="town">Town</label>
@@ -1579,16 +1503,13 @@
         <div class="error-msg" id="err-town">Please enter your town.</div>
       </div>
 
-
       <div class="field">
         <label for="postcode">Postcode</label>
         <input type="text" id="postcode" placeholder="{{location.postal_code}}">
         <div class="error-msg" id="err-postcode">Please enter your postcode.</div>
       </div>
 
-
       <div class="divider"></div>
-
 
       <div class="section-title" style="margin-bottom:0.75rem">How do we access the rear of your property?</div>
       <div class="access-grid" id="accessGrid">
@@ -1603,23 +1524,18 @@
         <div style="margin-top:0.6rem;font-size:1.15rem;font-family:'DM Serif Display',serif;font-weight:700;color:var(--highlight-text)" id="frontOnlyPrice"></div>
       </div>
 
-
       <div class="divider"></div>
-
 
       <div class="field">
         <label for="additionalInfo">Anything else we should know? <span style="color:var(--mid);font-weight:300">(optional)</span></label>
         <textarea id="additionalInfo" placeholder="e.g. dog in garden, narrow driveway, gate code…"></textarea>
       </div>
 
-
       <div class="divider"></div>
-
 
       <div class="section-title" style="margin-bottom:0.75rem">Your quote summary</div>
       <div class="quote-totals" id="bookingSummaryTotals" style="margin-bottom:0.5rem"></div>
       <p class="quote-note">* First clean price applies to your initial clean only. Regular prices apply from the second visit onwards.</p>
-
 
       <div class="btn-row">
         <button class="btn-back" onclick="goBackFromAddress()">← Back</button>
@@ -1628,16 +1544,13 @@
     </div>
   </div>
 
-
 </div><!-- /form-shell -->
-
 
 <script>
   // Per-client pricing config — set from client setup checklist
   const OFFER_THROUGH_PROPERTY    = '{{custom_values.front_only__through_property}}'.toLowerCase() === 'yes';
   const FRONT_ONLY_POLICY         = '{{custom_values.front_only_policy}}'.toLowerCase() === 'yes';
   const OFFER_FLATS = '{{custom_values.flats}}'.toLowerCase() === 'yes';
-
 
   // Frequency config — from HL custom values
   const FREQ_COUNT    = parseInt('{{custom_values.frequency_count}}')  || 2;
@@ -1653,13 +1566,14 @@
     parseFloat('{{custom_values.frequency_3_yearly_multiplier}}') || 0,
   ];
   const OFFER_ONEOFF  = '{{custom_values.service_offered__oneoff_window_cleaning}}'.toLowerCase() === 'yes';
+  const CHARGE_VELUX      = '{{custom_values.charge_for_velux}}'.toLowerCase() === 'yes';
+  const GOCARDLESS_LINK   = '{{custom_values.gocardless_link}}'.trim();
+  const VELUX_CHARGE  = parseFloat('{{custom_values.velux_charge_}}') || 0;
   const FREE_WINDOW_COMBO = '{{custom_values.free_window_clean_combo}}'.toLowerCase() === 'yes';
-
 
   // Package upsell constants
   const GUTTER_PKG_OFFERED   = '{{custom_values.gutter_package_offered}}'.toLowerCase() === 'yes';
   const CON_ROOF_PKG_OFFERED = '{{custom_values.conservatory_roof_package_offered}}'.toLowerCase() === 'yes';
-
 
   const GUTTER_PKG = {
     yearlyCombined: parseFloat('{{custom_values.gutter_package__yearly_combined_gutter_clear__wash__discount}}') || 0,
@@ -1668,12 +1582,10 @@
     sixMonthlyClear: parseFloat('{{custom_values.gutter_package__6_monthly_gutter_clear__discount}}') || 0,
   };
 
-
   const CON_ROOF_PKG = {
     threeMonthly: parseFloat('{{custom_values.conservatory_roof_package__3_monthly_discount}}') || 0,
     sixMonthly:   parseFloat('{{custom_values.conservatory_roof_package__6_monthly_discount}}') || 0,
   };
-
 
   // Stores selected packages { gutterPackage: null|{name, discount, price}, conRoofPackage: null|{name, discount, price} }
   const selectedPackages = { gutterPackage: null, conRoofPackage: null, gutterOneOff: null, conRoofOneOff: null };
@@ -1686,13 +1598,11 @@
   const OFFER_GUTTER_CLEARANCE = '{{custom_values.service_offered__gutter_clearance}}'.toLowerCase() === 'yes';
   const OFFER_GFS              = '{{custom_values.service_offered__gutter_fascia__soffit_washing}}'.toLowerCase() === 'yes';
 
-
   // Build frequency labels e.g. "4 Weekly" or "4 Monthly"
   const FREQ_SCHEDULE_LABEL = FREQ_SCHEDULE === 'monthly' ? 'Monthly' : 'Weekly';
   const FREQ_LABELS = FREQ_NUMS.map(n => n + ' ' + FREQ_SCHEDULE_LABEL);
   const FRONT_ONLY_DISCOUNT    = parseFloat('{{custom_values.front_only_discount}}') || 25; // % discount for front-only
   const FRONT_ONLY_MIN_PRICE   = parseFloat('{{custom_values.front_only_minimum}}')  || 10; // minimum front-only price (£)
-
 
   const ONEOFF_MULTIPLIER = parseFloat('{{custom_values.oneoff_multiplier}}') || 2;
   const ONEOFF_BASE_FREQ  = parseInt('{{custom_values.frequency_to_multiply_oneoff_and_internal}}') || 1;
@@ -1700,7 +1610,6 @@
   const INTERNAL_EVERY_MULTIPLIER      = parseFloat('{{custom_values.service_offered__internal_window_cleaning__every_visit_multiplier}}')        || 1.5;
   const INTERNAL_EVERYOTHER_MULTIPLIER  = parseFloat('{{custom_values.service_offered__internal_window_cleaning__every_other_visit_multiplier}}')  || 1.5;
   const INTERNAL_ONEOFF_MULTIPLIER      = parseFloat('{{custom_values.internal_multiplier}}') || 2;
-
 
   // Returns the price for a given frequency index from the prices object
   function getFreqPrice(prices, freqNum) {
@@ -1723,13 +1632,11 @@
 
 
 
-
-
-
-
   // Capture source from URL hash e.g. #source=google_ads
-  var source = (window.location.hash.match(/[#&]source=([^&]*)/) || [])[1] || '';
-
+  var _hlSource = '{{source}}'.trim();
+  var _qp = new URLSearchParams(window.location.search);
+  var source = (_hlSource && _hlSource !== '{{source}}') ? _hlSource
+    : (_qp.get('source') || _qp.get('utm_source') || (window.location.hash.match(/[#&]source=([^&]*)/) || [])[1] || '');
 
   // State
   const data = {
@@ -1747,14 +1654,13 @@
     town: '',
     postcode: '',
     rearAccess: '',
+    velux: '',
     frontOnlyApplies: false,
     frontOnlyPrice: null,
     additionalInfo: '',
     businessName: '',
     propertyAddress: ''
   };
-
-
 
 
   // ── Resume from link ─────────────────────────────────
@@ -1765,11 +1671,11 @@
     if (p.get('name'))  { data.fullName = p.get('name');  var el = document.getElementById('fullName');  if(el) el.value = data.fullName; }
     if (p.get('email')) { data.email    = p.get('email'); var el = document.getElementById('email');     if(el) el.value = data.email; }
     if (p.get('phone')) { data.phone    = p.get('phone'); var el = document.getElementById('phone');     if(el) el.value = data.phone; }
-    // Restore property data
-    if (p.get('propertyType')) data.propertyType = p.get('propertyType');
+    // Restore property data — normalise to lowercase/internal format
+    if (p.get('propertyType')) data.propertyType = p.get('propertyType').toLowerCase().replace(/ /g, '-');
     if (p.get('bedrooms'))     data.bedrooms     = p.get('bedrooms');
-    if (p.get('extension'))    data.extension    = p.get('extension');
-    if (p.get('conservatory')) data.conservatory = p.get('conservatory');
+    if (p.get('extension'))    data.extension    = p.get('extension').toLowerCase();
+    if (p.get('conservatory')) data.conservatory = p.get('conservatory').toLowerCase();
     if (p.get('flatFloor'))    data.flatFloor    = p.get('flatFloor');
     if (p.get('businessName')) data.businessName = p.get('businessName');
     // Navigate to correct page
@@ -1784,15 +1690,27 @@
   })();
   // ─────────────────────────────────────────────────────
 
-
   // Progress widths per step (pages 1-3 standard, page 4 custom)
   const progress = { 1: '33%', 2: '66%', 3: '100%', 4: '100%' };
-
 
   function setProgress(pct) {
     document.getElementById('progressFill').style.width = pct;
   }
 
+  function reportHeight() {
+    window.parent.postMessage({ type: 'iframeHeight', height: document.documentElement.scrollHeight }, '*');
+  }
+
+  // Continuously watch for any height change (dynamic fields, expanding sections etc.)
+  (function() {
+    if (typeof ResizeObserver === 'undefined') return;
+    var lastHeight = 0;
+    var ro = new ResizeObserver(function() {
+      var h = document.documentElement.scrollHeight;
+      if (h !== lastHeight) { lastHeight = h; reportHeight(); }
+    });
+    ro.observe(document.body);
+  })();
 
   function showPage(n) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1800,8 +1718,8 @@
     const hideProgress = [5, 6, '5', '5b', '6', '6b', '6c'].includes(n) || (typeof n === 'number' && n >= 5);
     document.querySelector('.progress-bar').style.display = hideProgress ? 'none' : '';
     window.scrollTo(0, 0);
+    setTimeout(reportHeight, 150);
   }
-
 
   function firePageView(pageId, resumePageOverride) {
     var pId = String(pageId);
@@ -1823,7 +1741,6 @@
     });
   }
 
-
   // --- Validation helpers ---
   function setError(id, msg, show) {
     const el = document.getElementById(id);
@@ -1832,9 +1749,7 @@
   }
   function clearError(id) { setError(id, null, false); }
 
-
   function validateEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-
 
   // --- Page 1 ---
   function goTo2() {
@@ -1844,9 +1759,7 @@
     data.phone = document.getElementById('phone').value.trim();
     data.marketingConsent = [...document.querySelectorAll('input[name="consent"]:checked')].map(c => c.value);
 
-
     const tcChecked = document.getElementById('tcAgree').checked;
-
 
     if (!data.fullName || !data.fullName.includes(' ') || data.fullName.split(' ').filter(Boolean).length < 2) { setError('err-fullName', 'Please enter your first and last name.', true); ok = false; } else clearError('err-fullName');
     if (!validateEmail(data.email)) { setError('err-email', null, true); ok = false; } else clearError('err-email');
@@ -1859,7 +1772,6 @@
       clearError('err-tc');
       document.getElementById('tcLabel').classList.remove('error-state');
     }
-
 
     if (ok) {
       fireWebhook(WH_CONTACT, {
@@ -1875,7 +1787,6 @@
     }
   }
 
-
   // --- Property cards ---
   function selectProperty(card, type) {
     document.querySelectorAll('.property-card').forEach(c => c.classList.remove('selected'));
@@ -1886,10 +1797,8 @@
     setTimeout(goTo3, 280);
   }
 
-
   function goTo3() {
     if (!data.propertyType) { setError('err-property', null, true); return; }
-
 
     // Commercial or large/unusual goes to page 4 directly
     if (data.propertyType === 'commercial') {
@@ -1898,13 +1807,11 @@
       return;
     }
 
-
     if (data.propertyType === 'large-unusual') {
       setProgress('100%');
       showPage('4a');
       return;
     }
-
 
     if (data.propertyType === 'flat') {
       setProgress('100%');
@@ -1917,11 +1824,9 @@
       return;
     }
 
-
     setProgress('100%');
     showPage(3);
   }
-
 
   // --- Bedroom selector ---
   function selectBedroom(btn, val) {
@@ -1930,7 +1835,6 @@
     data.bedrooms = val;
     clearError('err-bedrooms');
   }
-
 
   // --- Yes/No ---
   const ynState = {};
@@ -1943,6 +1847,10 @@
     ynState[field] = val;
   }
 
+  // Show velux section if enabled
+  (function() {
+    if (CHARGE_VELUX) document.getElementById('veluxSection').style.display = '';
+  })();
 
   function showConservatoryUpsell(show) {
     const el = document.getElementById('conservatoryUpsell');
@@ -1959,7 +1867,6 @@
     }
   }
 
-
   function showRoofPanels(show) {
     const el = document.getElementById('roofPanelsField');
     el.style.display = show ? '' : 'none';
@@ -1970,7 +1877,6 @@
       clearError('err-roofPanels');
     }
   }
-
 
   function goToCustom() {
     let ok = true;
@@ -1984,8 +1890,12 @@
         if (!data.roofPanels || isNaN(panels) || panels < 1) { setError('err-roofPanels', null, true); ok = false; } else clearError('err-roofPanels');
       }
     }
-    if (!ok) return;
+    // Velux validation
+    if (CHARGE_VELUX) {
+      if (!data.velux) { setError('err-velux', null, true); ok = false; } else clearError('err-velux');
+    }
 
+    if (!ok) return;
 
     // Route: 6+ bedrooms → large/unusual page
     if (data.bedrooms === '6+') {
@@ -2000,9 +1910,6 @@
 
 
 
-
-
-
   // --- Back navigation ---
   function goBackFromAddress() {
     // Reset access selection
@@ -2014,13 +1921,11 @@
     goBack(8);
   }
 
-
   function goBack(to) {
     const progs = { 1: '33%', 2: '66%', 3: '100%' };
     setProgress(progs[to] || '33%');
     showPage(to);
   }
-
 
   function goBackFromPage4() {
     if (data.propertyType === 'large-unusual' || data.propertyType === 'commercial') {
@@ -2035,7 +1940,6 @@
     }
   }
 
-
   // --- Flat selectors ---
   function selectFlatFloor(btn, val) {
     document.querySelectorAll('#flatFloorGrid .bedroom-btn').forEach(b => b.classList.remove('selected'));
@@ -2044,7 +1948,6 @@
     clearError('err-flatFloor');
   }
 
-
   function selectFlatBedroom(btn, val) {
     document.querySelectorAll('#flatBedroomGrid .bedroom-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
@@ -2052,19 +1955,16 @@
     clearError('err-flatBedrooms');
   }
 
-
   function goToFlatQuote() {
     let ok = true;
     if (!data.flatFloor) { setError('err-flatFloor', null, true); ok = false; } else clearError('err-flatFloor');
     if (!data.bedrooms) { setError('err-flatBedrooms', null, true); ok = false; } else clearError('err-flatBedrooms');
     if (!ok) return;
     fireWebhook(WH_FLAT, { event: 'flat_details', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, flatFloor: data.flatFloor, bedrooms: data.bedrooms });
+    fireWebhook(WH_FLAT_DETAILS, { event: 'flat_details_submitted', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: 'flat', flatFloor: data.flatFloor, bedrooms: data.bedrooms });
     document.getElementById('quoteBackBtn').setAttribute('onclick', 'goBack(7)');
     showQuotePage('flat_details');
   }
-
-
-
 
 
 
@@ -2074,17 +1974,14 @@
     data.town          = document.getElementById('largeTown').value.trim();
     data.postcode      = document.getElementById('largePostcode').value.trim();
 
-
     if (!data.streetAddress) { setError('err-largeStreetAddress', null, true); ok = false; } else clearError('err-largeStreetAddress');
     if (!data.town)          { setError('err-largeTown', null, true); ok = false; } else clearError('err-largeTown');
     if (!data.postcode)      { setError('err-largePostcode', null, true); ok = false; } else clearError('err-largePostcode');
     if (!ok) return;
 
-
     fireWebhook(WH_LARGE, { event: 'large_unusual_submission', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, streetAddress: data.streetAddress, town: data.town, postcode: data.postcode });
     showPage(6);
   }
-
 
   async function submitCommercial() {
     let ok = true;
@@ -2093,7 +1990,6 @@
     data.town          = document.getElementById('bizTown').value.trim();
     data.postcode      = document.getElementById('bizPostcode').value.trim();
     const bizServices  = [...document.querySelectorAll('input[name="bizService"]:checked')].map(c => c.value);
-
 
     if (!data.businessName)  { setError('err-businessName', null, true); ok = false; }  else clearError('err-businessName');
     if (!data.streetAddress) { setError('err-bizStreetAddress', null, true); ok = false; } else clearError('err-bizStreetAddress');
@@ -2104,7 +2000,6 @@
     fireWebhook(WH_COMMERCIAL, { event: 'commercial_submission', fullName: data.fullName, email: data.email, phone: data.phone, businessName: data.businessName, streetAddress: data.streetAddress, town: data.town, postcode: data.postcode });
     showPage(6);
   }
-
 
   function buildPayload() {
     return {
@@ -2125,14 +2020,11 @@
   }
 
 
-
-
   // =============================================
   // PRICING ENGINE
   // =============================================
   // Pricing data hardcoded from uploaded CSV
   var pricingData = null;
-
 
   async function fetchPricing() {
     if (pricingData) return pricingData;
@@ -2140,32 +2032,32 @@
     // beds: { freq1, freq2, addExt, addCon, gutterClear, gfs, extClear, extGfs, conClear, conGfs }
     pricingData = {
       'semi-detached': {
-        '1': { freq1:parseFloat("{{custom_values.1_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.1_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_semi__conservatory_roof}}")||0 },
-        '2': { freq1:parseFloat("{{custom_values.2_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.2_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_semi__conservatory_roof}}")||0 },
-        '3': { freq1:parseFloat("{{custom_values.3_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.3_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_semi__conservatory_roof}}")||0 },
-        '4': { freq1:parseFloat("{{custom_values.4_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.4_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_semi__conservatory_roof}}")||0 },
-        '5': { freq1:parseFloat("{{custom_values.5_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.5_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_semi__conservatory_roof}}")||0 },
+        '1': { freq1:parseFloat("{{custom_values.1_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.1_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.1_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_semi__conservatory_roof}}")||0 },
+        '2': { freq1:parseFloat("{{custom_values.2_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.2_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.2_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_semi__conservatory_roof}}")||0 },
+        '3': { freq1:parseFloat("{{custom_values.3_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.3_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.3_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_semi__conservatory_roof}}")||0 },
+        '4': { freq1:parseFloat("{{custom_values.4_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.4_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.4_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_semi__conservatory_roof}}")||0 },
+        '5': { freq1:parseFloat("{{custom_values.5_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.5_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.5_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_semi__conservatory_roof}}")||0 },
       },
       'terraced': {
-        '1': { freq1:parseFloat("{{custom_values.1_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.1_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_semi__conservatory_roof}}")||0 },
-        '2': { freq1:parseFloat("{{custom_values.2_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.2_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_semi__conservatory_roof}}")||0 },
-        '3': { freq1:parseFloat("{{custom_values.3_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.3_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_semi__conservatory_roof}}")||0 },
-        '4': { freq1:parseFloat("{{custom_values.4_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.4_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_semi__conservatory_roof}}")||0 },
-        '5': { freq1:parseFloat("{{custom_values.5_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_semi__frequency_2}}")||0, addExt:parseFloat("{{custom_values.5_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_semi__conservatory_roof}}")||0 },
+        '1': { freq1:parseFloat("{{custom_values.1_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.1_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.1_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_semi__conservatory_roof}}")||0 },
+        '2': { freq1:parseFloat("{{custom_values.2_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.2_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.2_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_semi__conservatory_roof}}")||0 },
+        '3': { freq1:parseFloat("{{custom_values.3_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.3_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.3_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_semi__conservatory_roof}}")||0 },
+        '4': { freq1:parseFloat("{{custom_values.4_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.4_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.4_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_semi__conservatory_roof}}")||0 },
+        '5': { freq1:parseFloat("{{custom_values.5_bed_semi__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_semi__frequency_2}}")||0, freq3:parseFloat("{{custom_values.5_bed_semi__frequency_3}}")||0, addExt:parseFloat("{{custom_values.5_bed_semi__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_semi__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_semi__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_semi__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_semi__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_semi__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_semi__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_semi__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_semi__conservatory_roof}}")||0 },
       },
       'detached': {
-        '1': { freq1:parseFloat("{{custom_values.1_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_detached__frequency_2}}")||0, addExt:parseFloat("{{custom_values.1_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_detached__conservatory_roof}}")||0 },
-        '2': { freq1:parseFloat("{{custom_values.2_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_detached__frequency_2}}")||0, addExt:parseFloat("{{custom_values.2_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_detached__conservatory_roof}}")||0 },
-        '3': { freq1:parseFloat("{{custom_values.3_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_detached__frequency_2}}")||0, addExt:parseFloat("{{custom_values.3_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_detached__conservatory_roof}}")||0 },
-        '4': { freq1:parseFloat("{{custom_values.4_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_detached__frequency_2}}")||0, addExt:parseFloat("{{custom_values.4_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_detached__conservatory_roof}}")||0 },
-        '5': { freq1:parseFloat("{{custom_values.5_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_detached__frequency_2}}")||0, addExt:parseFloat("{{custom_values.5_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_detached__conservatory_roof}}")||0 },
+        '1': { freq1:parseFloat("{{custom_values.1_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_detached__frequency_2}}")||0, freq3:parseFloat("{{custom_values.1_bed_detached__frequency_3}}")||0, addExt:parseFloat("{{custom_values.1_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_detached__conservatory_roof}}")||0 },
+        '2': { freq1:parseFloat("{{custom_values.2_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_detached__frequency_2}}")||0, freq3:parseFloat("{{custom_values.2_bed_detached__frequency_3}}")||0, addExt:parseFloat("{{custom_values.2_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_detached__conservatory_roof}}")||0 },
+        '3': { freq1:parseFloat("{{custom_values.3_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_detached__frequency_2}}")||0, freq3:parseFloat("{{custom_values.3_bed_detached__frequency_3}}")||0, addExt:parseFloat("{{custom_values.3_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_detached__conservatory_roof}}")||0 },
+        '4': { freq1:parseFloat("{{custom_values.4_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_detached__frequency_2}}")||0, freq3:parseFloat("{{custom_values.4_bed_detached__frequency_3}}")||0, addExt:parseFloat("{{custom_values.4_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_detached__conservatory_roof}}")||0 },
+        '5': { freq1:parseFloat("{{custom_values.5_bed_detached__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_detached__frequency_2}}")||0, freq3:parseFloat("{{custom_values.5_bed_detached__frequency_3}}")||0, addExt:parseFloat("{{custom_values.5_bed_detached__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_detached__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_detached__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_detached__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_detached__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_detached__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_detached__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_detached__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_detached__conservatory_roof}}")||0 },
       },
       'three-storey': {
-        '1': { freq1:parseFloat("{{custom_values.1_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_three_storey__frequency_2}}")||0, addExt:parseFloat("{{custom_values.1_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_three_storey__conservatory_roof}}")||0 },
-        '2': { freq1:parseFloat("{{custom_values.2_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_three_storey__frequency_2}}")||0, addExt:parseFloat("{{custom_values.2_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_three_storey__conservatory_roof}}")||0 },
-        '3': { freq1:parseFloat("{{custom_values.3_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_three_storey__frequency_2}}")||0, addExt:parseFloat("{{custom_values.3_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_three_storey__conservatory_roof}}")||0 },
-        '4': { freq1:parseFloat("{{custom_values.4_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_three_storey__frequency_2}}")||0, addExt:parseFloat("{{custom_values.4_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_three_storey__conservatory_roof}}")||0 },
-        '5': { freq1:parseFloat("{{custom_values.5_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_three_storey__frequency_2}}")||0, addExt:parseFloat("{{custom_values.5_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_three_storey__conservatory_roof}}")||0 },
+        '1': { freq1:parseFloat("{{custom_values.1_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.1_bed_three_storey__frequency_2}}")||0, freq3:parseFloat("{{custom_values.1_bed_three_storey__frequency_3}}")||0, addExt:parseFloat("{{custom_values.1_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.1_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.1_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.1_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.1_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.1_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.1_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.1_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.1_bed_three_storey__conservatory_roof}}")||0 },
+        '2': { freq1:parseFloat("{{custom_values.2_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.2_bed_three_storey__frequency_2}}")||0, freq3:parseFloat("{{custom_values.2_bed_three_storey__frequency_3}}")||0, addExt:parseFloat("{{custom_values.2_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.2_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.2_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.2_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.2_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.2_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.2_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.2_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.2_bed_three_storey__conservatory_roof}}")||0 },
+        '3': { freq1:parseFloat("{{custom_values.3_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.3_bed_three_storey__frequency_2}}")||0, freq3:parseFloat("{{custom_values.3_bed_three_storey__frequency_3}}")||0, addExt:parseFloat("{{custom_values.3_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.3_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.3_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.3_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.3_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.3_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.3_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.3_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.3_bed_three_storey__conservatory_roof}}")||0 },
+        '4': { freq1:parseFloat("{{custom_values.4_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.4_bed_three_storey__frequency_2}}")||0, freq3:parseFloat("{{custom_values.4_bed_three_storey__frequency_3}}")||0, addExt:parseFloat("{{custom_values.4_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.4_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.4_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.4_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.4_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.4_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.4_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.4_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.4_bed_three_storey__conservatory_roof}}")||0 },
+        '5': { freq1:parseFloat("{{custom_values.5_bed_three_storey__frequency_1}}")||0, freq2:parseFloat("{{custom_values.5_bed_three_storey__frequency_2}}")||0, freq3:parseFloat("{{custom_values.5_bed_three_storey__frequency_3}}")||0, addExt:parseFloat("{{custom_values.5_bed_three_storey__extension_freq_1}}")||0, addCon:parseFloat("{{custom_values.5_bed_three_storey__conservatory_freq_1}}")||0, gutterClear:parseFloat("{{custom_values.5_bed_three_storey__gutter_clear}}")||0, gfs:parseFloat("{{custom_values.5_bed_three_storey__gutter_wash}}")||0, extClear:parseFloat("{{custom_values.5_bed_three_storey__extension_clear}}")||0, extGfs:parseFloat("{{custom_values.5_bed_three_storey__extension_clean}}")||0, conClear:parseFloat("{{custom_values.5_bed_three_storey__conservatory_clear}}")||0, conGfs:parseFloat("{{custom_values.5_bed_three_storey__conservatory_clean}}")||0, conRoof:parseFloat("{{custom_values.5_bed_three_storey__conservatory_roof}}")||0 },
       },
       'flat': {
         'ground': {
@@ -2195,14 +2087,22 @@
   }
 
 
-
-
   function getPrice(pricing) {
-    const pt   = data.propertyType;
-    const beds = data.bedrooms === '6+' ? '5' : data.bedrooms; // fallback 6+ to 5
-    const hasExt = data.extension === 'yes';
-    const hasCon = data.conservatory === 'yes';
-
+    // Normalise propertyType in case it arrived capitalised via resume link
+    const ptRaw = (data.propertyType || '').toLowerCase().replace(/ /g, '-');
+    const ptMap = {
+      'semi-detached': 'semi-detached', 'semidetached': 'semi-detached',
+      'terraced': 'terraced',
+      'detached': 'detached',
+      'three-storey': 'three-storey', 'three storey': 'three-storey', 'threestorey': 'three-storey',
+      'flat': 'flat',
+      'large-unusual': 'large-unusual', 'large or unusual': 'large-unusual',
+      'commercial': 'commercial'
+    };
+    const pt   = ptMap[ptRaw] || ptRaw;
+    const beds = data.bedrooms === '6+' ? '5' : data.bedrooms;
+    const hasExt = (data.extension || '').toLowerCase() === 'yes';
+    const hasCon = (data.conservatory || '').toLowerCase() === 'yes';
 
     let row;
     if (pt === 'flat') {
@@ -2218,16 +2118,14 @@
       };
     }
 
-
     row = pricing[pt] && pricing[pt][beds];
     if (!row) return null;
 
-
-    const freq1 = row.freq1 + (hasExt ? row.addExt : 0) + (hasCon ? row.addCon : 0);
-    const freq2 = row.freq2 + (hasExt ? row.addExt : 0) + (hasCon ? row.addCon : 0);
+    const veluxAdd = (CHARGE_VELUX && data.velux === 'yes') ? VELUX_CHARGE : 0;
+    const freq1 = row.freq1 + (hasExt ? row.addExt : 0) + (hasCon ? row.addCon : 0) + veluxAdd;
+    const freq2 = row.freq2 + (hasExt ? row.addExt : 0) + (hasCon ? row.addCon : 0) + veluxAdd;
     const gutterClear = row.gutterClear + (hasExt ? row.extClear : 0) + (hasCon ? row.conClear : 0);
     const gfs = row.gfs + (hasExt ? row.extGfs : 0) + (hasCon ? row.conGfs : 0);
-
 
     let conRoof = null;
     if (data.conservatory === 'yes') {
@@ -2240,18 +2138,15 @@
       // CON_ROOF_MODE === 'no' → conRoof stays null
     }
 
-
-    const freq3 = row.freq3 ? row.freq3 + (hasExt ? row.addExt : 0) + (hasCon ? row.addCon : 0) : null;
+    const freq3 = row.freq3 ? row.freq3 + (hasExt ? row.addExt : 0) + (hasCon ? row.addCon : 0) + veluxAdd : null;
     // Raw base prices (before extensions) used for one-off/internal multiplier base
     const rawFreq1 = row.freq1;
     const rawFreq2 = row.freq2;
     const rawFreq3 = row.freq3 || null;
     const addOns   = (hasExt ? row.addExt : 0) + (hasCon ? row.addCon : 0);
 
-
     return { freq1, freq2, freq3, gutterClear, gfs, conRoof, isFlat: false, rawFreq1, rawFreq2, rawFreq3, addOns };
   }
-
 
   // =============================================
   // QUOTE PAGE
@@ -2262,7 +2157,6 @@
     document.getElementById('quoteContent').style.display = 'none';
     data.selectedServices = {};
 
-
     let pricing;
     try { pricing = await fetchPricing(); }
     catch(e) {
@@ -2271,22 +2165,34 @@
       return;
     }
 
-
     const prices = getPrice(pricing);
     if (!prices) { document.getElementById('quoteLoading').innerHTML = '<p style="color:var(--danger)">Could not calculate a price for your property. Please contact us directly.</p>'; return; }
 
-
     buildServiceCards(prices);
-
 
     document.getElementById('quoteLoading').style.display = 'none';
     document.getElementById('quoteContent').style.display = '';
     firePageView(8);
 
-
     // Fire property info webhook now that prices are calculated
     if (whEvent) {
       var internalBase = getRawFreqPrice(prices, INTERNAL_BASE_FREQ);
+      var quotesPayload = {
+        windowCleaning: {
+          freq1: prices.freq1 || null,
+          freq2: prices.freq2 || null,
+          freq3: prices.freq3 || null,
+          oneOff: OFFER_ONEOFF ? roundUp50p(getFreqPrice(prices, ONEOFF_BASE_FREQ) * ONEOFF_MULTIPLIER) : null
+        },
+        internalWindowCleaning: OFFER_INTERNAL ? {
+          everyClean:      roundUp50p(internalBase * INTERNAL_EVERY_MULTIPLIER),
+          everyOtherClean: roundUp50p(internalBase * INTERNAL_EVERYOTHER_MULTIPLIER),
+          oneOff:          roundUp50p(internalBase * INTERNAL_ONEOFF_MULTIPLIER)
+        } : null,
+        gutterClearance:         (OFFER_GUTTER_CLEARANCE && prices.gutterClear) ? prices.gutterClear : null,
+        gutterFasciaSoffit:      (OFFER_GFS && prices.gfs) ? prices.gfs : null,
+        conservatoryRoofCleaning: prices.conRoof || null
+      };
       fireWebhook(WH_STANDARD, {
         event: whEvent,
         fullName: data.fullName,
@@ -2297,30 +2203,27 @@
         flatFloor: data.flatFloor || null,
         extension: ynLabel(data.extension) || null,
         conservatory: ynLabel(data.conservatory) || null,
-        quotes: {
-          windowCleaning: {
-            freq1: prices.freq1 || null,
-            freq2: prices.freq2 || null,
-            freq3: prices.freq3 || null,
-            oneOff: OFFER_ONEOFF ? roundUp50p(getFreqPrice(prices, ONEOFF_BASE_FREQ) * ONEOFF_MULTIPLIER) : null
-          },
-          internalWindowCleaning: OFFER_INTERNAL ? {
-            everyClean:      roundUp50p(internalBase * INTERNAL_EVERY_MULTIPLIER),
-            everyOtherClean: roundUp50p(internalBase * INTERNAL_EVERYOTHER_MULTIPLIER),
-            oneOff:          roundUp50p(internalBase * INTERNAL_ONEOFF_MULTIPLIER)
-          } : null,
-          gutterClearance:         (OFFER_GUTTER_CLEARANCE && prices.gutterClear) ? prices.gutterClear : null,
-          gutterFasciaSoffit:      (OFFER_GFS && prices.gfs) ? prices.gfs : null,
-          conservatoryRoofCleaning: prices.conRoof || null
-        }
+        velux: ynLabel(data.velux) || null,
+        quotes: quotesPayload
       });
+      // Also fire dedicated flat webhook with quotes included
+      if (whEvent === 'flat_details') {
+        fireWebhook(WH_FLAT_DETAILS, {
+          event: 'flat_details_submitted',
+          fullName: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          propertyType: 'flat',
+          flatFloor: data.flatFloor,
+          bedrooms: data.bedrooms,
+          quotes: quotesPayload
+        });
+      }
     }
   }
 
-
   function buildServiceCards(prices) {
     const services = [];
-
 
     // External one-off: full freq price (base + extensions) × oneoff_multiplier
     const oneoffBase = getFreqPrice(prices, ONEOFF_BASE_FREQ) * ONEOFF_MULTIPLIER;
@@ -2351,13 +2254,11 @@
       });
     }
 
-
     if (!prices.isFlat) {
       if (OFFER_GUTTER_CLEARANCE && prices.gutterClear !== null) services.push({ id: 'gutterClear', name: 'Gutter Clearance', price: prices.gutterClear, per: 'one-off', recurring: false });
       if (OFFER_GFS && prices.gfs !== null) services.push({ id: 'gfs', name: 'Gutter, Fascia & Soffit Washing', price: prices.gfs, per: 'one-off', recurring: false });
       if (prices.conRoof !== null) services.push({ id: 'conRoof', name: 'Conservatory Roof Cleaning', price: prices.conRoof, per: 'one-off', recurring: false });
     }
-
 
     // Default: window cleaning set to 4weekly, all others unanswered (null)
     services.forEach(s => {
@@ -2370,11 +2271,9 @@
       }
     });
 
-
     renderCards(services);
     updateInternalCard();
   }
-
 
   function renderCards(services) {
     const container = document.getElementById('serviceCards');
@@ -2441,10 +2340,8 @@
         </div>`;
     }).join('');
 
-
     updateTotals();
   }
-
 
   function selectFreq(id, freq) {
     const svc = data.selectedServices[id];
@@ -2456,7 +2353,6 @@
     else if (freq === 'oneoff') {
       svc.price = svc.oneoffBase; // already = rawBase * ONEOFF_MULTIPLIER + addOns
     }
-
 
     const card = document.getElementById('card-' + id);
     card.className = 'service-card selected-yes';
@@ -2471,13 +2367,11 @@
     updateTotals();
   }
 
-
   function updateInternalCard() {
     var extSvc = data.selectedServices['windowCleaning'];
     var intSvc = data.selectedServices['internalCleaning'];
     var card = document.getElementById('card-internalCleaning');
     if (!card || !intSvc) return;
-
 
     if (!OFFER_INTERNAL || !extSvc || !extSvc.selected) {
       card.style.display = 'none';
@@ -2486,7 +2380,6 @@
       updateTotals();
       return;
     }
-
 
     card.style.display = '';
     var extFreq = extSvc.chosenFreq;
@@ -2500,12 +2393,10 @@
     var priceRowEl  = document.getElementById('internal-price-row');
     var pound = '\u00a3';
 
-
     intSvc.selected = null;
     intSvc.chosenFreq = null;
     card.className = 'service-card';
     updateTotals();
-
 
     if (extFreq === 'oneoff' || !OFFER_REGULAR_INTERNAL) {
       // One-off external OR regular internal not offered — Yes Please / No Thanks
@@ -2551,14 +2442,11 @@
   }
 
 
-
-
   function selectInternal(id, type, price) {
     const svc = data.selectedServices[id];
     svc.selected = true;
     svc.chosenFreq = type;
     svc.price = price;
-
 
     const card = document.getElementById('card-' + id);
     card.className = 'service-card selected-yes';
@@ -2578,13 +2466,11 @@
     updateTotals();
   }
 
-
   function toggleService(id, selected) {
     const svc = data.selectedServices[id];
     svc.selected = selected;
     const card = document.getElementById('card-' + id);
     const noBtn = document.getElementById('no-' + id);
-
 
     if (svc.type === 'frequency') {
       // Frequency card: clear both freq buttons, highlight No Thanks
@@ -2613,7 +2499,6 @@
     updateTotals();
   }
 
-
   function updateTotals() {
     const svcs = Object.values(data.selectedServices).filter(s => s.selected === true);
     const winSvc = data.selectedServices['windowCleaning'];
@@ -2623,13 +2508,11 @@
     const intIsEvery      = intSvc2 && intSvc2.selected === true && intSvc2.chosenFreq === 'every';
     const intIsEveryOther = intSvc2 && intSvc2.selected === true && intSvc2.chosenFreq === 'everyother';
 
-
     // Determine if front-only affects first clean too
     // Only applies if: front-only is active, regular clean selected, no additional services booked
     const hasAdditionalServices = svcs.some(s => s.id !== 'windowCleaning' && s.id !== 'internalCleaning');
     const frontOnlyGoesForward = data.frontOnlyApplies && data.frontOnlyPrice && !extIsOneOff;
     const frontOnlyFirstClean  = frontOnlyGoesForward && !hasAdditionalServices;
-
 
     // First clean: front-only price if no extras, otherwise full price (access arranged)
     const firstCleanWinPrice = (frontOnlyFirstClean && winSvc?.selected) ? data.frontOnlyPrice : (winSvc ? winSvc.price : 0);
@@ -2637,7 +2520,6 @@
       if (s.id === 'windowCleaning') return sum + firstCleanWinPrice;
       return sum + s.price;
     }, 0);
-
 
     // On the post-booking upsell page only: gutter/conRoof services were already paid for
     // as one-offs in the original booking. Recalculate their first-clean contribution based
@@ -2648,12 +2530,10 @@
       const gfsSvcFC      = data.selectedServices['gfs'];
       const conRoofSvcFC  = data.selectedServices['conRoof'];
 
-
       // Remove original service prices (already included by svcs.reduce above)
       if (gutterSvcFC?.selected === true)  firstClean -= (gutterSvcFC.price  || 0);
       if (gfsSvcFC?.selected    === true)  firstClean -= (gfsSvcFC.price     || 0);
       if (conRoofSvcFC?.selected === true) firstClean -= (conRoofSvcFC.price || 0);
-
 
       // Re-add based on package/one-off selections
       if (selectedPackages.gutterPackage) {
@@ -2672,10 +2552,8 @@
       }
     }
 
-
     // Regular ongoing price uses front-only price
     const ongoingWinPrice = frontOnlyGoesForward ? data.frontOnlyPrice : (winSvc ? winSvc.price : 0);
-
 
     let regularClean = null;
     let everyOtherClean = null;
@@ -2684,13 +2562,10 @@
       if (intIsEveryOther) everyOtherClean = ongoingWinPrice + intSvc2.price;
     }
 
-
     let html = '';
-
 
     const comboDiscount = getComboDiscount();
     const firstCleanFinal = Math.max(0, firstClean - comboDiscount);
-
 
     const pkgAddsToFirstClean = (selectedPackages.gutterPackage && !selectedPackages.gutterPackage.alreadyBooked) || (selectedPackages.conRoofPackage && !selectedPackages.conRoofPackage.alreadyBooked);
     if (svcs.length > 0 || pkgAddsToFirstClean) {
@@ -2719,7 +2594,6 @@
         html += `<div class="quote-total-row secondary" style="color:var(--highlight)"><span>📦 ${selectedPackages.conRoofPackage.name}</span><span class="amt">£${selectedPackages.conRoofPackage.price.toFixed(2)}/clean (2nd+)</span></div>`;
       }
 
-
       // Explain front-only pricing going forward
       if (frontOnlyGoesForward && !frontOnlyFirstClean) {
         // Additional services booked — first clean is full access, front-only from second visit
@@ -2732,7 +2606,6 @@
       html += `<div class="quote-total-row main" style="color:var(--mid)"><span>No services selected</span><span>—</span></div>`;
     }
 
-
     document.getElementById('quoteTotals').innerHTML = html;
     const summaryEl = document.getElementById('bookingSummaryTotals');
     if (summaryEl) summaryEl.innerHTML = html;
@@ -2740,7 +2613,6 @@
     if (pkgSummaryEl) pkgSummaryEl.innerHTML = html;
     updatePkgPricingNotice();
   }
-
 
   async function confirmQuote() {
     // Validate all one-off services have been answered
@@ -2758,7 +2630,6 @@
     });
     if (!allAnswered) return;
 
-
     const selected = Object.values(data.selectedServices).filter(s => s.selected).map(s => ({
       service: s.name, price: s.price, per: s.per
     }));
@@ -2772,10 +2643,9 @@
     firePageView(9);
         var _intlSvc = data.selectedServices['internalCleaning'];
     var _intlStatus = !_intlSvc || !_intlSvc.selected ? 'No' : (_intlSvc.chosenFreq === 'everyother' ? 'Every Other Time' : _intlSvc.chosenFreq === 'oneoff' ? 'One-Off' : 'Every Time');
-    fireWebhook(WH_SERVICE, { event: 'quote_confirmed', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, internalWindowCleaning: _intlStatus, selectedServicesSummary: buildServicesSummary(), pricing: buildPricingSummary(), selectedServices: selected });
+    fireWebhook(WH_SERVICE, { event: 'quote_confirmed', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, velux: ynLabel(data.velux) || null, internalWindowCleaning: _intlStatus, selectedServicesSummary: buildServicesSummary(), pricing: buildPricingSummary(), selectedServices: selected });
     showPage(9);
   }
-
 
   function shouldShowPackages() {
     if (data.propertyType === 'flat') return false;
@@ -2783,7 +2653,6 @@
     const conRoofHasPrice = (conRoofSvc?.price || 0) > 0;
     return GUTTER_PKG_OFFERED || (CON_ROOF_PKG_OFFERED && conRoofHasPrice);
   }
-
 
   function renderPackagesPage() {
     const gutterSvc  = data.selectedServices['gutterClear'];
@@ -2798,9 +2667,7 @@
     const gfsOneOffBooked         = gfsSvc?.selected === true;
     const conRoofOneOffBooked     = conRoofSvc?.selected === true;
 
-
     let html = '';
-
 
     // --- Gutter Package ---
     if (GUTTER_PKG_OFFERED) {
@@ -2808,12 +2675,10 @@
       const gfsPrice     = gfsSvc?.price     || 0;
       const combinedPrice = clearPrice + gfsPrice;
 
-
       html += `<div class="pkg-section" id="pkgGutter">
         <div class="pkg-section-title">🪣 Gutter Package</div>
         <div class="pkg-section-sub">Keep your gutters maintained year-round with a package deal. <strong>Your first gutter clean is charged at the full one-off price.</strong> The discounted package rate applies from the <strong>second visit onwards</strong>.</div>
         <div class="pkg-options" id="gutterPkgOptions">`;
-
 
       // Only show combined if both gutterClear AND gfs are booked
       if (combinedPrice > 0 && GUTTER_PKG.yearlyCombined > 0) {
@@ -2830,7 +2695,6 @@
           discPrice, 'per year', saving, disc, combinedPrice, combinedAlreadyBooked, combinedFirstVisit);
       }
 
-
       if (GUTTER_PKG.yearlyClear > 0) {
         const disc = GUTTER_PKG.yearlyClear;
         const discPrice = clearPrice * (1 - disc / 100);
@@ -2840,7 +2704,6 @@
           'Gutter clearance once a year',
           discPrice, 'per year', saving, disc, clearPrice, gutterClearBooked);
       }
-
 
       if (GUTTER_PKG.yearlyGfs > 0) {
         const disc = GUTTER_PKG.yearlyGfs;
@@ -2852,7 +2715,6 @@
           discPrice, 'per year', saving, disc, gfsPrice, gfsBooked);
       }
 
-
       if (GUTTER_PKG.sixMonthlyClear > 0) {
         const disc = GUTTER_PKG.sixMonthlyClear;
         const discPrice = clearPrice * (1 - disc / 100);
@@ -2863,9 +2725,7 @@
           discPrice, 'per visit', saving, disc, clearPrice, gutterClearBooked);
       }
 
-
       html += `</div><div style="margin-top:1rem"><div class="pkg-section-title" style="font-size:0.85rem;margin-bottom:0.5rem">Or add a one-off service:</div><div class="pkg-options">`;
-
 
       // One-off gutter clearance
       if (clearPrice > 0) {
@@ -2884,7 +2744,6 @@
         </div>`;
       }
 
-
       // One-off GFS
       if (gfsPrice > 0) {
         const gfsB = gfsOneOffBooked;
@@ -2902,24 +2761,20 @@
         </div>`;
       }
 
-
       html += `</div></div>`;
       html += `<button class="pkg-none-btn" id="gutterPkgNone" onclick="selectPackage('gutterPackage', null)">No package, thanks</button>
       </div>`;
     }
-
 
     // --- Conservatory Roof Package ---
     if (CON_ROOF_PKG_OFFERED) {
       const roofPrice = conRoofSvc?.price || 0;
       if (roofPrice <= 0) { /* customer has no conservatory roof price — hide section */ } else {
 
-
       html += `<div class="pkg-section" id="pkgConRoof">
         <div class="pkg-section-title">🏠 Conservatory Roof Package</div>
         <div class="pkg-section-sub">Keep your conservatory roof spotless throughout the year. <strong>Your first conservatory roof clean is at the full quoted price.</strong> The discounted rate kicks in from the <strong>second clean onwards</strong>.</div>
         <div class="pkg-options" id="conRoofPkgOptions">`;
-
 
       if (CON_ROOF_PKG.threeMonthly > 0) {
         const disc = CON_ROOF_PKG.threeMonthly;
@@ -2931,7 +2786,6 @@
           discPrice, 'per clean', saving, disc, roofPrice, conRoofBooked);
       }
 
-
       if (CON_ROOF_PKG.sixMonthly > 0) {
         const disc = CON_ROOF_PKG.sixMonthly;
         const discPrice = roofPrice * (1 - disc / 100);
@@ -2942,9 +2796,7 @@
           discPrice, 'per clean', saving, disc, roofPrice, conRoofBooked);
       }
 
-
       html += `</div><div style="margin-top:1rem"><div class="pkg-section-title" style="font-size:0.85rem;margin-bottom:0.5rem">Or add a one-off service:</div><div class="pkg-options">`;
-
 
       if (roofPrice > 0) {
         const crB = conRoofOneOffBooked;
@@ -2962,17 +2814,14 @@
         </div>`;
       }
 
-
       html += `</div></div>`;
       html += `<button class="pkg-none-btn" id="conRoofPkgNone" onclick="selectPackage('conRoofPackage', null)">No package, thanks</button>
       </div>`;
       } // end roofPrice > 0 check
     }
 
-
     document.getElementById('pkgContent').innerHTML = html;
     updateTotals();
-
 
     // Re-apply any previously selected packages
     if (selectedPackages.gutterPackage !== undefined) {
@@ -2989,7 +2838,6 @@
     oneOffIntent.conRoofWanted  = conRoofOneOffBooked;
     syncOneOffState();
   }
-
 
   function pkgCardHtml(group, id, name, desc, discPrice, perLabel, saving, discPct, fullPrice, alreadyBooked, firstVisitCost) {
     // Round to nearest pound
@@ -3023,15 +2871,12 @@
     </div>`;
   }
 
-
   function updatePkgPricingNotice() {
     const notice = document.getElementById('pkgPricingNotice');
     const rows   = document.getElementById('pkgPricingRows');
     if (!notice || !rows) return;
 
-
     const lines = [];
-
 
     // Gutter package
     if (selectedPackages.gutterPackage) {
@@ -3049,7 +2894,6 @@
       lines.push({ label: selectedPackages.gutterOneOff.name, first: selectedPackages.gutterOneOff.price, ongoing: null });
     }
 
-
     // Con roof package
     if (selectedPackages.conRoofPackage) {
       const card = document.getElementById('pkg-conRoofPackage-' + selectedPackages.conRoofPackage.id);
@@ -3066,12 +2910,10 @@
       lines.push({ label: selectedPackages.conRoofOneOff.name, first: selectedPackages.conRoofOneOff.price, ongoing: null });
     }
 
-
     if (lines.length === 0) {
       notice.style.display = 'none';
       return;
     }
-
 
     notice.style.display = '';
     rows.innerHTML = lines.map(l => {
@@ -3095,10 +2937,8 @@
     }).join('<hr style="border:none;border-top:1px solid var(--light);margin:0.25rem 0">');
   }
 
-
   // Track user's one-off intent independently of package deselections
   const oneOffIntent = { clearWanted: false, gfsWanted: false, conRoofWanted: false };
-
 
   function syncOneOffState() {
     // Apply intent, but suppress any that are covered by the current package
@@ -3107,16 +2947,13 @@
     const coversGfs   = pkgId && ['yearly-gfs','yearly-combined'].includes(pkgId);
     const coversConRoof = !!selectedPackages.conRoofPackage;
 
-
     const showClear   = oneOffIntent.clearWanted   && !coversClear;
     const showGfs     = oneOffIntent.gfsWanted     && !coversGfs;
     const showConRoof = oneOffIntent.conRoofWanted && !coversConRoof;
 
-
     document.getElementById('pkg-gutterOneOff-clear')?.classList.toggle('selected', showClear);
     document.getElementById('pkg-gutterOneOff-gfs')?.classList.toggle('selected', showGfs);
     document.getElementById('pkg-conRoofOneOff-roof')?.classList.toggle('selected', showConRoof);
-
 
     // Recompute gutterOneOff
     const gutterSvc = data.selectedServices['gutterClear'];
@@ -3136,11 +2973,9 @@
     selectedPackages.conRoofOneOff = showConRoof ? { name: 'One-Off Conservatory Roof Clean', price: conRoofSvc?.price || 0 } : null;
   }
 
-
   function selectPackage(group, id, silent) {
     document.querySelectorAll(`[id^="pkg-${group}-"]`).forEach(c => c.classList.remove('selected'));
     const noneBtn = document.getElementById(group === 'gutterPackage' ? 'gutterPkgNone' : 'conRoofPkgNone');
-
 
     if (id === null) {
       selectedPackages[group] = null;
@@ -3149,7 +2984,6 @@
       const card = document.getElementById(`pkg-${group}-${id}`);
       if (card) card.classList.add('selected');
       if (noneBtn) noneBtn.classList.remove('selected');
-
 
       const discEl = card?.querySelector('.pkg-saving');
       selectedPackages[group] = {
@@ -3161,19 +2995,15 @@
       };
     }
 
-
     // Re-sync one-offs: restore those no longer covered, suppress those that are
     syncOneOffState();
-
 
     if (!silent) updateTotals();
   }
 
-
   function confirmPackages() {
     showPage(9);
   }
-
 
   function skipPackages() {
     selectedPackages.gutterPackage  = null;
@@ -3181,11 +3011,9 @@
     showPage(9);
   }
 
-
   // Track one-off selections separately
   // selectedPackages.gutterOneOff = { type: 'clear'|'gfs'|both, price: N }
   // selectedPackages.conRoofOneOff = { price: N }
-
 
   function toggleOneOff(group, type, price) {
     const cardId = `pkg-${group}-${type}`;
@@ -3193,12 +3021,10 @@
     const isSelected = card?.classList.contains('selected');
     const nowWanting = !isSelected;
 
-
     // Toggle intent
     if (group === 'gutterOneOff') {
       if (type === 'clear') oneOffIntent.clearWanted = nowWanting;
       if (type === 'gfs')   oneOffIntent.gfsWanted   = nowWanting;
-
 
       // If selecting a one-off, deselect any package that covers it
       if (nowWanting && selectedPackages.gutterPackage) {
@@ -3215,7 +3041,6 @@
     } else {
       oneOffIntent.conRoofWanted = nowWanting;
 
-
       // If selecting con roof one-off, deselect any con roof package
       if (nowWanting && selectedPackages.conRoofPackage) {
         document.querySelectorAll('[id^="pkg-conRoofPackage-"]').forEach(c => c.classList.remove('selected'));
@@ -3225,12 +3050,10 @@
       }
     }
 
-
     syncOneOffState();
     updateTotals();
     updatePkgPricingNotice();
   }
-
 
   async function submitPackageUpsell() {
     // Send webhook with package selections then show success
@@ -3246,14 +3069,14 @@
       fireWebhook(WH_PACKAGE, { event: 'package_upsell', fullName: data.fullName, email: data.email, phone: data.phone, packagesSummary: _packagesSummary, estimatedYearlyValue: _fullPricing.estimatedYearlyValue, selectedServicesSummary: buildFullServicesSummary(), pricing: _fullPricing });
       firePageView(5, 2);
     }
+    updateConfirmationPage();
     showPage(5);
   }
-
 
   function finishAndGoHome() {
+    updateConfirmationPage();
     showPage(5);
   }
-
 
   // --- Access selector ---
   function selectAccess(btn, val) {
@@ -3262,11 +3085,9 @@
     data.rearAccess = val;
     clearError('err-rearAccess');
 
-
     const notice = document.getElementById('frontOnlyNotice');
     const isThroughProperty = val === 'through-property';
     const isFlat = data.propertyType === 'flat';
-
 
     if (isThroughProperty && !isFlat && !OFFER_THROUGH_PROPERTY) {
       if (!FRONT_ONLY_POLICY) {
@@ -3274,7 +3095,6 @@
         showPage('6c');
         return;
       }
-
 
       // Front-only policy applies — apply discount
       const winSvc = data.selectedServices['windowCleaning'];
@@ -3307,22 +3127,39 @@
     updateTotals();
   }
 
-
   // --- Final submission ---
-  async function submitBooking() {
+  function updateConfirmationPage() {
+    var winSvc    = data.selectedServices['windowCleaning'];
+    var isRegular = winSvc && winSvc.selected && winSvc.chosenFreq !== 'oneoff';
+    var gcLink    = String(GOCARDLESS_LINK || '').trim();
+    var hasLink   = gcLink && gcLink.indexOf('{') === -1;
+
+    var gcRegular = document.getElementById('gcRegularMsg');
+    var gcOneoff  = document.getElementById('gcOneoffMsg');
+    var gcBtn     = document.getElementById('gcBtn');
+
+    if (isRegular) {
+      if (gcRegular) gcRegular.style.display = '';
+      if (gcOneoff)  gcOneoff.style.display  = 'none';
+      if (gcBtn && hasLink) gcBtn.href = gcLink;
+    } else {
+      if (gcRegular) gcRegular.style.display = 'none';
+      if (gcOneoff)  gcOneoff.style.display  = '';
+    }
+  }
+
+    async function submitBooking() {
     let ok = true;
     data.streetAddress = document.getElementById('streetAddress').value.trim();
     data.town          = document.getElementById('town').value.trim();
     data.postcode      = document.getElementById('postcode').value.trim();
     data.additionalInfo = document.getElementById('additionalInfo').value.trim();
 
-
     if (!data.streetAddress) { setError('err-streetAddress', null, true); ok = false; } else clearError('err-streetAddress');
     if (!data.town)          { setError('err-town', null, true); ok = false; } else clearError('err-town');
     if (!data.postcode)      { setError('err-postcode', null, true); ok = false; } else clearError('err-postcode');
     if (!data.rearAccess)    { setError('err-rearAccess', null, true); ok = false; } else clearError('err-rearAccess');
     if (!ok) return;
-
 
     const selected = Object.values(data.selectedServices).filter(s => s.selected === true).map(s => ({
       service: s.name, price: s.price, per: s.per || 'per clean'
@@ -3331,25 +3168,24 @@
     const firstCleanTotal = Math.max(0, Object.values(data.selectedServices).filter(s => s.selected === true).reduce((sum, s) => sum + s.price, 0) - comboDiscountFinal);
     const winSvc = data.selectedServices['windowCleaning'];
 
-
     const intSvcFinal = data.selectedServices['internalCleaning'];
     const intFreqLabel = { every: 'Every Clean', everyother: 'Every Other Clean', oneoff: 'One-Off' };
     const winFreqLabel = winSvc?.chosenFreq === 'oneoff' ? 'One-Off' : (FREQ_LABELS[parseInt(winSvc?.chosenFreq?.replace('freq','')) - 1] || winSvc?.chosenFreq || '');
     const regularWindowPrice = data.frontOnlyApplies && data.frontOnlyPrice ? data.frontOnlyPrice : (winSvc?.selected ? winSvc.price : null);
 
-
     // Populate success page with company details
-
-
 
 
     const selectedFinal = Object.values(data.selectedServices).filter(s => s.selected === true).map(s => ({ service: s.name, price: s.price, per: s.per || 'per clean' }));
     var _intlSvc = data.selectedServices['internalCleaning'];
     var _intlStatus = !_intlSvc || !_intlSvc.selected ? 'No' : (_intlSvc.chosenFreq === 'everyother' ? 'Every Other Time' : _intlSvc.chosenFreq === 'oneoff' ? 'One-Off' : 'Every Time');
-        fireWebhook(WH_SERVICE, { event: 'booking_confirmed', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, internalWindowCleaning: _intlStatus, streetAddress: data.streetAddress, town: data.town, postcode: data.postcode, rearAccess: ynLabel(data.rearAccess), frontOnlyApplies: data.frontOnlyApplies, selectedServicesSummary: buildFullServicesSummary(), pricing: buildPricingSummary(), additionalInfo: data.additionalInfo });
+        fireWebhook(WH_SERVICE, { event: 'booking_confirmed', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, velux: ynLabel(data.velux) || null, internalWindowCleaning: _intlStatus, streetAddress: data.streetAddress, town: data.town, postcode: data.postcode, rearAccess: ynLabel(data.rearAccess), frontOnlyApplies: data.frontOnlyApplies, selectedServicesSummary: buildFullServicesSummary(), pricing: buildPricingSummary(), additionalInfo: data.additionalInfo });
     var _winSvc = data.selectedServices['windowCleaning'];
     var _winFreq = _winSvc && _winSvc.selected ? (_winSvc.chosenFreq === 'oneoff' ? 'One-Off' : (FREQ_LABELS[parseInt(_winSvc.chosenFreq.replace('freq',''),10)-1] || _winSvc.chosenFreq)) : null;
-        fireWebhook(WH_BOOKING, { event: 'booking_made', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, bedrooms: data.bedrooms, extension: ynLabel(data.extension), conservatory: ynLabel(data.conservatory), streetAddress: data.streetAddress, town: data.town, postcode: data.postcode, rearAccess: ynLabel(data.rearAccess), frontOnlyApplies: data.frontOnlyApplies, additionalInfo: data.additionalInfo, windowCleaningFrequency: _winFreq, internalWindowCleaning: _intlStatus, estimatedYearlyValue: buildPricingSummary().estimatedYearlyValue, selectedServicesSummary: buildFullServicesSummary(), pricing: buildPricingSummary() });
+        fireWebhook(WH_BOOKING, { event: 'booking_made', fullName: data.fullName, email: data.email, phone: data.phone, propertyType: data.propertyType, bedrooms: data.bedrooms, extension: ynLabel(data.extension), conservatory: ynLabel(data.conservatory), velux: ynLabel(data.velux) || null, streetAddress: data.streetAddress, town: data.town, postcode: data.postcode, rearAccess: ynLabel(data.rearAccess), frontOnlyApplies: data.frontOnlyApplies, additionalInfo: data.additionalInfo, windowCleaningFrequency: _winFreq, internalWindowCleaning: _intlStatus, estimatedYearlyValue: buildPricingSummary().estimatedYearlyValue, selectedServicesSummary: buildFullServicesSummary(), pricing: buildPricingSummary() });
+    // Show GoCardless section if a regular (non-one-off) window cleaning was booked
+
+    updateConfirmationPage();
     if (shouldShowPackages()) {
       renderPackagesPage();
       showPage('5b');
@@ -3359,7 +3195,6 @@
       firePageView(5, 2);
     }
   }
-
 
   // Returns the combo discount amount (window clean price off first clean if both gutters booked)
   function getComboDiscount() {
@@ -3372,7 +3207,6 @@
     return winSvc.price;
   }
 
-
   // Build the 5 named service data points for webhook payloads
   function buildServiceDataPoints() {
     const winSvc     = data.selectedServices['windowCleaning'];
@@ -3380,7 +3214,6 @@
     const gutterSvc  = data.selectedServices['gutterClear'];
     const gfsSvc     = data.selectedServices['gfs'];
     const conRoofSvc = data.selectedServices['conRoof'];
-
 
     // External Window Cleaning Service
     let externalWindowCleaningService = 'No Thanks';
@@ -3394,7 +3227,6 @@
       }
     }
 
-
     // Internal Window Cleaning Service
     let internalWindowCleaningService = 'No Thanks';
     if (intSvc?.selected) {
@@ -3402,12 +3234,10 @@
       internalWindowCleaningService = map[intSvc.chosenFreq] || intSvc.chosenFreq;
     }
 
-
     // One-off services
     const gutterClearanceService             = gutterSvc  ? (gutterSvc.selected  ? 'Yes Please' : 'No Thanks') : null;
     const gutterFasciaSoffitWashingService   = gfsSvc     ? (gfsSvc.selected     ? 'Yes Please' : 'No Thanks') : null;
     const conservatoryRoofCleaningService    = conRoofSvc ? (conRoofSvc.selected ? 'Yes Please' : 'No Thanks') : null;
-
 
     return {
       externalWindowCleaningService,
@@ -3419,8 +3249,6 @@
   }
 
 
-
-
   function buildPricingSummary() {
     var win   = data.selectedServices['windowCleaning'];
     var intl  = data.selectedServices['internalCleaning'];
@@ -3429,18 +3257,15 @@
     var roof  = data.selectedServices['conRoof'];
     var combo = getComboDiscount();
 
-
     // First clean = all selected service prices minus combo discount
     var firstClean = Math.max(0, Object.values(data.selectedServices)
       .filter(function(s){ return s.selected === true; })
       .reduce(function(sum, s){ return sum + s.price; }, 0) - combo);
 
-
     // Regular (ongoing) clean = window + internal (recurring only)
     var regularClean = 0;
     var winRegular = null;
     var annualValue = 0;
-
 
     // Use pre-calculated cleansPerYear stored on the service object at card-build time
     var cleansPerYear = 0;
@@ -3450,7 +3275,6 @@
         cleansPerYear = win.freqCleansPerYear[freqIdx];
       }
     }
-
 
     if (win && win.selected) {
       var price = Number((data.frontOnlyApplies && data.frontOnlyPrice) ? data.frontOnlyPrice : win.price) || 0;
@@ -3468,7 +3292,6 @@
       if (intlCleansPerYear > 0) annualValue += intlPrice * intlCleansPerYear;
     }
     annualValue = isFinite(annualValue) && annualValue > 0 ? Math.round(annualValue * 100) / 100 : 0;
-
 
     return {
       firstCleanTotal:   parseFloat(firstClean.toFixed(2)),
@@ -3495,7 +3318,6 @@
     };
   }
 
-
   function buildServicesSummary() {
     var parts = [];
     var win = data.selectedServices['windowCleaning'];
@@ -3503,7 +3325,6 @@
     var gutter = data.selectedServices['gutterClear'];
     var gfs = data.selectedServices['gfs'];
     var roof = data.selectedServices['conRoof'];
-
 
     if (win && win.selected) {
       if (win.chosenFreq === 'oneoff') {
@@ -3515,22 +3336,17 @@
       }
     }
 
-
     if (intl && intl.selected) {
       var intlMap = { every: 'Internal Window Cleaning (Every Time)', everyother: 'Internal Window Cleaning (Every Other Time)', oneoff: 'One-Off Internal Window Cleaning' };
       parts.push(intlMap[intl.chosenFreq] || 'Internal Window Cleaning');
     }
 
-
     if (gutter && gutter.selected)  parts.push('Gutter Clearance');
     if (gfs    && gfs.selected)     parts.push('Gutter, Fascia & Soffit Washing');
     if (roof   && roof.selected)    parts.push('Conservatory Roof Cleaning');
 
-
     return parts.map(function(p){ return '- ' + p; }).join('\n') || 'None selected';
   }
-
-
 
 
   // Builds services summary including package upsell additions
@@ -3542,7 +3358,6 @@
     var gfs    = data.selectedServices['gfs'];
     var roof   = data.selectedServices['conRoof'];
 
-
     // Window cleaning
     if (win && win.selected) {
       if (win.chosenFreq === 'oneoff') {
@@ -3553,13 +3368,11 @@
       }
     }
 
-
     // Internal window cleaning
     if (intl && intl.selected) {
       var intlMap = { every: 'Internal Window Cleaning (Every Time)', everyother: 'Internal Window Cleaning (Every Other Time)', oneoff: 'One-Off Internal Window Cleaning' };
       parts.push(intlMap[intl.chosenFreq] || 'Internal Window Cleaning');
     }
-
 
     // Gutter clearance — from page 8 OR package/one-off
     var hasGutterClear = (gutter && gutter.selected)
@@ -3567,13 +3380,11 @@
       || (selectedPackages.gutterPackage && (selectedPackages.gutterPackage.id === 'yearly-combined' || selectedPackages.gutterPackage.id === 'yearly-clear' || selectedPackages.gutterPackage.id === '6monthly-clear'));
     if (hasGutterClear) parts.push('Gutter Clearance');
 
-
     // Gutter fascia & soffit — from page 8 OR package/one-off
     var hasGfs = (gfs && gfs.selected)
       || selectedPackages.gutterOneOff === 'gfs'
       || (selectedPackages.gutterPackage && (selectedPackages.gutterPackage.id === 'yearly-combined' || selectedPackages.gutterPackage.id === 'yearly-gfs'));
     if (hasGfs) parts.push('Gutter, Fascia & Soffit Washing');
-
 
     // Conservatory roof — from page 8 OR package/one-off
     var hasRoof = (roof && roof.selected)
@@ -3581,15 +3392,12 @@
       || selectedPackages.conRoofPackage;
     if (hasRoof) parts.push('Conservatory Roof Cleaning');
 
-
     return parts.map(function(p){ return '- ' + p; }).join('\n') || 'None selected';
   }
-
 
   // Builds pricing summary including package upsell additions
   function buildFullPricingSummary() {
     var base = buildPricingSummary();
-
 
     // Add package prices to first clean
     var pkgFirstClean = base.firstCleanTotal;
@@ -3616,7 +3424,6 @@
       if (roofSvc && !roofSvc.selected) pkgFirstClean += roofSvc.price;
     }
 
-
     base.firstCleanTotal = parseFloat(pkgFirstClean.toFixed(2));
     base.gutterPackage       = selectedPackages.gutterPackage   ? selectedPackages.gutterPackage.name   : null;
     base.gutterPackagePrice  = selectedPackages.gutterPackage   ? selectedPackages.gutterPackage.price  : null;
@@ -3624,7 +3431,6 @@
     base.conRoofPackagePrice = selectedPackages.conRoofPackage  ? selectedPackages.conRoofPackage.price : null;
     base.gutterOneOff        = selectedPackages.gutterOneOff    || null;
     base.conRoofOneOff       = selectedPackages.conRoofOneOff   ? true : null;
-
 
     // Add package recurring annual values
     var pkgAnnual = base.estimatedAnnualValue || 0;
@@ -3643,7 +3449,6 @@
     base.estimatedAnnualValue = parseFloat(pkgAnnual.toFixed(2));
     return base;
   }
-
 
   // ── Page names & resume links ────────────────────────
   var PAGE_NAMES = {
@@ -3670,19 +3475,18 @@
   }
   // ─────────────────────────────────────────────────────
 
-
   // ── Webhook ──────────────────────────────────────────
   var WH_CONTACT    = '{{custom_values.webhook__quote_form__contact_details}}';
   var WH_STANDARD   = '{{custom_values.webhooks__property_information}}';
   var WH_SERVICE    = '{{custom_values.webhook_3__service_selected}}';
   var WH_PACKAGE    = '{{custom_values.webhook_4__quote_form__package_upsell}}';
   var WH_FLAT       = '{{custom_values.webhook_5__quote_form__flats}}';
+  var WH_FLAT_DETAILS = '{{custom_values.webhook_10__quote_form__flats}}';
   var WH_SIXBED     = '{{custom_values.webhook_6__quote_form__six_bed}}';
   var WH_LARGE      = '{{custom_values.webhook_7__quote_form__large_or_unusual}}';
   var WH_COMMERCIAL = '{{custom_values.webhook_8__quote_form__commercial}}';
   var WH_BOOKING    = '{{custom_values.webhook_5__booking_made}}';
   var WH_PAGEVIEW   = '{{custom_values.webhook_9__quote_form__page_view}}';
-
 
   function ynLabel(v) { return v === 'yes' ? 'Yes' : v === 'no' ? 'No' : v; }
     function fireWebhook(url, payload) {
